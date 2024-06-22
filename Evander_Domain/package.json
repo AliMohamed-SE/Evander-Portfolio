@@ -1,0 +1,18 @@
+{
+  "name": "evander_domain",
+  "version": "0.0.0",
+  "description": "Evander_Domain",
+  "main": "models/index.js",
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0"
+  },
+  "eslintConfig": {},
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.4.3"
+  }
+}

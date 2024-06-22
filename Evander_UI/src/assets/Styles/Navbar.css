@@ -1,0 +1,39 @@
+.navbar {
+    background-color: #2b3d4f;
+    box-shadow: none;
+}
+.offcanvas{
+    padding: 0;
+    background-color: #2b3d4f;
+}
+
+/* CustomNavbar.css */
+.custom-navbar-toggler {
+    border: none;
+    color: white;
+}
+
+    .custom-navbar-toggler:focus {
+        outline: none;
+        box-shadow: none; /* Remove default focus outline */
+    }
+
+.custom-navbar-toggler-icon {
+    color:white;
+    height: 1.5rem;
+}
+
+
+    .custom-navbar-toggler-icon:hover {
+        color: black;
+    }
+
+
+.nav-link {
+    padding: 1rem;
+    margin-left: 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+}
+

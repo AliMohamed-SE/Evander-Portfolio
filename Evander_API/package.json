@@ -1,0 +1,31 @@
+{
+  "name": "evander_api",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "description": "Evander_API",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "awilix": "^10.0.2",
+    "body-parser": "^1.20.2",
+    "cookie-parser": "^1.4.0",
+    "cors": "^2.8.5",
+    "debug": "^2.2.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.3",
+    "morgan": "^1.7.0",
+    "pug": "^2.0.0-beta6",
+    "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0",
+    "nodemon": "^3.1.4"
+  },
+  "eslintConfig": {}
+}

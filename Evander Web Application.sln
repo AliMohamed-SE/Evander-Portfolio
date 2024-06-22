@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Evander_UI", "Evander_UI\Evander_UI.esproj", "{566A98DE-934D-4404-9AC1-99B3855676EC}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Evander_API", "Evander_API\Evander_API.njsproj", "{6E7EC7CB-E9E0-4FF4-AFFF-5CB457D7718E}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Evander_Domain", "Evander_Domain\Evander_Domain.njsproj", "{6EBA042C-34E0-45C9-9C29-00C26E0F1C9B}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Evander_DAO", "Evander_DAO\Evander_DAO.njsproj", "{7EE4BF5B-52BE-469F-A86F-7FCB87D52F58}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Evander_Services", "Evander_Services\Evander_Services.njsproj", "{9FCA395B-2DA5-4FE6-93CC-39793D3F2A87}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "SharedLibrary", "SharedLibrary\SharedLibrary.njsproj", "{A73AF6F8-6BC6-4D0C-AE76-D5F35DAF3A1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{566A98DE-934D-4404-9AC1-99B3855676EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{566A98DE-934D-4404-9AC1-99B3855676EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{566A98DE-934D-4404-9AC1-99B3855676EC}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{566A98DE-934D-4404-9AC1-99B3855676EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{566A98DE-934D-4404-9AC1-99B3855676EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{566A98DE-934D-4404-9AC1-99B3855676EC}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{6E7EC7CB-E9E0-4FF4-AFFF-5CB457D7718E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E7EC7CB-E9E0-4FF4-AFFF-5CB457D7718E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E7EC7CB-E9E0-4FF4-AFFF-5CB457D7718E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E7EC7CB-E9E0-4FF4-AFFF-5CB457D7718E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EBA042C-34E0-45C9-9C29-00C26E0F1C9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EBA042C-34E0-45C9-9C29-00C26E0F1C9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EBA042C-34E0-45C9-9C29-00C26E0F1C9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EBA042C-34E0-45C9-9C29-00C26E0F1C9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EE4BF5B-52BE-469F-A86F-7FCB87D52F58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EE4BF5B-52BE-469F-A86F-7FCB87D52F58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EE4BF5B-52BE-469F-A86F-7FCB87D52F58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EE4BF5B-52BE-469F-A86F-7FCB87D52F58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FCA395B-2DA5-4FE6-93CC-39793D3F2A87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FCA395B-2DA5-4FE6-93CC-39793D3F2A87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FCA395B-2DA5-4FE6-93CC-39793D3F2A87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FCA395B-2DA5-4FE6-93CC-39793D3F2A87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A73AF6F8-6BC6-4D0C-AE76-D5F35DAF3A1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A73AF6F8-6BC6-4D0C-AE76-D5F35DAF3A1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A73AF6F8-6BC6-4D0C-AE76-D5F35DAF3A1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A73AF6F8-6BC6-4D0C-AE76-D5F35DAF3A1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93C70EAB-1A60-457D-8C07-8DE909D8A993}
+	EndGlobalSection
+EndGlobal

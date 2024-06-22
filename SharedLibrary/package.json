@@ -1,0 +1,18 @@
+{
+  "name": "shared-library",
+  "version": "0.0.0",
+  "description": "SharedLibrary",
+  "main": "database.js",
+  "author": {
+    "name": ""
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0"
+  },
+  "eslintConfig": {},
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "mongodb": "^6.7.0",
+    "mongoose": "^8.4.3"
+  }
+}
