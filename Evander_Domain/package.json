@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "Evander_Domain",
   "main": "models/index.js",
+  "type": "module",
   "author": {
     "name": ""
   },

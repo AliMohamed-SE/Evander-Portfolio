@@ -31,7 +31,11 @@
   <ItemGroup>
     <Content Include=".env" />
     <Content Include=".eslintrc.json" />
+    <Content Include="models\timeframe.js" />
     <Content Include="models\category.js" />
+    <Content Include="models\index.js" />
+    <Content Include="models\budget.js" />
+    <Content Include="models\platform.js" />
     <Content Include="models\project.js" />
     <Content Include="models\service.js" />
     <Content Include="package.json" />

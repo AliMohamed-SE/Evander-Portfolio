@@ -32,6 +32,9 @@
   <ItemGroup>
     <Content Include=".env" />
     <Content Include=".eslintrc.json" />
+    <Content Include="DAOs\categoryDAO.js" />
+    <Content Include="DAOs\serviceDAO.js" />
+    <Content Include="DAOs\contactDAO.js" />
     <Content Include="DAOs\projectDAO.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />

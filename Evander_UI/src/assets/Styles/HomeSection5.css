@@ -1,0 +1,105 @@
+.home-section5 {
+    background-color: var(--primary-color);
+    min-height: 88vh;
+    color: white;
+}
+
+.home-section5-row {
+    width: 100%;
+    height: 100%; /* Ensure the row takes full height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+}
+
+.section5-image {
+    max-width: 60%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure block display for centering */
+    margin: 0 auto; /* Center horizontally within the column */
+    border-radius: 30px;
+}
+
+.home-section5-header {
+    font-family: 'Coolvetica';
+    font-weight: normal;
+    font-size: 3.5vw;
+    text-align: start;
+}
+
+    .home-section5-header span {
+        color: var(--secondary-color);
+    }
+
+.home-section5-text {
+    font-family: 'Calibri';
+    font-weight: normal;
+    font-size: 3vw;
+    text-align: start;
+    line-height: 3.5rem;
+}
+/* Optional: Adjust font sizes for responsive design */
+@media (max-width: 1200px) and (min-width: 776px) {
+    .section5-image {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .section5-image {
+        max-width: 100%;
+    }
+
+    .home-section5-header {
+        font-size: 60px;
+    }
+
+    .home-section5-text {
+        font-size: 40px;
+        line-height: 3rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .section5-image {
+        max-width: 100%;
+    }
+
+    .home-section5-header {
+        font-size: 50px;
+    }
+
+    .home-section5-text {
+        font-size: 30px;
+        line-height: 2.2rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .section5-image {
+        max-width: 70%;
+    }
+
+    .home-section5-header {
+        font-size: 50px;
+    }
+
+    .home-section5-text {
+        font-size: 30px;
+        line-height: 2.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .section5-image {
+        max-width: 90%;
+    }
+
+    .home-section5-header {
+        font-size: 30px;
+    }
+
+    .home-section5-text {
+        font-size: 20px;
+        line-height: 2rem;
+    }
+}

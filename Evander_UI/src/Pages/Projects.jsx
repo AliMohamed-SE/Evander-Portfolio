@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
-import { fadeInUpStaggering } from '../assets/Animations/Animations';
+import { useState, useEffect} from 'react';
+import { useServices } from '../ServiceContext.jsx';
 
 // Bootstrap
 import Col from 'react-bootstrap/Col';
@@ -10,59 +10,77 @@ import '../assets/Styles/Projects.css';
 
 // Components
 import ProjectCard from '../Components/ProjectCard';
-import Searchbar from '../Components/Filterbar';
+import Searchbar from '../Components/Searchbar';
 
 function Projects() {
-    const projectsRef = useRef([]);
+    const { projectsUIService, categoriesUIService, servicesUIService } = useServices();
+
     const [projects, setProjects] = useState([]);
+    const [categories, setCategories] = useState([]);
+    const [services, setServices] = useState([]);
 
-    const categories = [
-        { id: 1, name: 'Category 1' },
-        { id: 2, name: 'Category 2' },
-        { id: 3, name: 'Category 3' },
-    ];
+    async function fetchCategoriesData() {
+        try {
+            const categories = await categoriesUIService.getAllCategories();
 
-    const services = [
-        { id: 1, name: 'Service 1' },
-        { id: 2, name: 'Service 2' },
-        { id: 3, name: 'Service 3' },
-        { id: 4, name: 'Service 4' },
-        { id: 5, name: 'Service 5' },
-        { id: 6, name: 'Service 6' },
-        { id: 7, name: 'Service 7' },
-        { id: 8, name: 'Service 8' },
-        { id: 9, name: 'Service 9' },
-        { id: 10, name: 'Service 10' },
-    ];
+            setCategories(categories);
+        } catch (error) {
+            // Handle error if needed
+            console.error('Failed to fetch projects:', error);
+        }
+    }
+
+    async function fetchServicesData(category = null) {
+        try {
+            const services = await servicesUIService.getAllServices(category);
+            fetchProjectsData(category, null, null);
+
+            setServices(services);
+        } catch (error) {
+            // Handle error if needed
+            console.error('Failed to fetch projects:', error);
+        }
+    }
+
+    async function fetchProjectsData(category, service, filterQuery) {
+        try {
+            const projects = await projectsUIService.getAllProjectsGeneralInfo(category, service, filterQuery);
+            setProjects(projects);
+        } catch (error) {
+            // Handle error if needed
+            console.error('Failed to fetch projects:', error);
+        }
+    }
 
     useEffect(() => {
-        fadeInUpStaggering(projectsRef.current);
-    }, [projects]);
+        fetchCategoriesData();
+        fetchServicesData();
+    }, []);
 
-    function handleSearch() {
-        setProjects([
-            { id: 5, name: 'Project 5' },
-            { id: 6, name: 'Project 6' },
-            { id: 7, name: 'Project 7' },
-            { id: 8, name: 'Project 8' }
-        ]);
+    function handleSearch(selectedCategory, selectedService, filterQuery) {
+        fetchProjectsData(selectedCategory, selectedService, filterQuery);
     }
 
     return (
         <section className="projects-section">
-            <Searchbar Categories={categories} Services={services} HandleSearch={handleSearch} />
+            <Searchbar Categories={categories} Services={services} HandleSearch={handleSearch} HandleCategoryDropDown={fetchServicesData} />
             <div className="projects-cards">
-                <div>{projects.length === 0 && <p>No Projects Found</p>}</div>
-                <Row xs={1} md={2} lg={3} xl={4} className="g-4">
-                    {projects != null && projects.map((project, index) => (
-                        <Col key={project.id}>
-                            <ProjectCard
-                                ref={(el) => (projectsRef.current[index] = el)}
-                                name={project.name}
-                            />
-                        </Col>
-                    ))}
-                </Row>
+                {projects == null || projects.length === 0 ? (
+                    <p>No Projects Found</p>
+                ) : (
+                    <Row xs={1} md={2} lg={3} xl={4} className="g-4">
+                        {projects.map((project) => (
+                            <Col key={project.id}>
+                                <ProjectCard
+                                    id={project.id}
+                                    title={project.title}
+                                    services={project.services}
+                                    thumbnail={project.thumbnail}
+                                />
+                            </Col>
+                        ))}
+                    </Row>
+                )}
             </div>
         </section>
     );

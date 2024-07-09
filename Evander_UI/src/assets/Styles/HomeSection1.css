@@ -1,0 +1,86 @@
+.home-section-transformingideas {
+    background-color: var(--primary-color);
+    min-height: 88vh;
+    color: white;
+}
+
+.transformingideas {
+    font-family: 'Calibri';
+    font-weight: normal;
+    font-size: 95px;
+}
+
+.Ideas {
+    font-family: 'Ellianarelles Path';
+    color: var(--secondary-color);
+}
+
+.stunningdigitalexperiences {
+    font-family: 'Calibri';
+    font-weight: normal;
+    font-size: 95px;
+}
+
+.designanddevelopment {
+    font-family: 'Calibri';
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 45px;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .transformingideas {
+        font-size: 80px;
+    }
+
+    .stunningdigitalexperiences {
+        font-size: 80px;
+    }
+
+    .designanddevelopment {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .transformingideas {
+        font-size: 60px;
+    }
+
+    .stunningdigitalexperiences {
+        font-size: 60px;
+    }
+
+    .designanddevelopment {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .transformingideas {
+        font-size: 50px;
+    }
+
+    .stunningdigitalexperiences {
+        font-size: 50px;
+    }
+
+    .designanddevelopment {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .transformingideas {
+        font-size: 35px;
+    }
+
+    .stunningdigitalexperiences {
+        font-size: 35px;
+    }
+
+    .designanddevelopment {
+        font-size: 15px;
+    }
+}

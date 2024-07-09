@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import PropTypes from 'prop-types';
 // Styles
 import '../assets/Styles/Filterbar.css';
@@ -6,11 +7,24 @@ import '../assets/Styles/Filterbar.css';
 import { Card, Form, Row, Col, InputGroup, FormControl } from 'react-bootstrap';
 
 // Font Awesome
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function Searchbar(props) {
+    const [selectedCategory, setSelectedCategory] = useState('');
+    const [selectedService, setSelectedService] = useState('');
+
+    function handleCategoryChange(event) {
+        setSelectedService('');
+        setSelectedCategory(event.target.value);
+        props.HandleCategoryDropDown(event.target.value);
+    }
+
+    function handleServiceChange(event) {
+        setSelectedService(event.target.value);
+        props.HandleSearch(selectedCategory, selectedService,null);
+    }
+
     return (
         <Card className="Searchbar-Card p-0 mb-3">
             <Card.Body>
@@ -19,10 +33,10 @@ function Searchbar(props) {
                         <Col xs={6} sm={4}>
                             <Form.Group className="d-flex align-items-center">
                                 <Form.Label className="mb-0 me-2">Categories</Form.Label>
-                                <Form.Select>
-                                    <option disabled selected>--select a value--</option>
+                                <Form.Select value={selectedCategory} onChange={handleCategoryChange}>
+                                    <option disabled value="">--select a value--</option>
                                     {props.Categories.map((category) => (
-                                        <option key={"Category" + category.id}>{category.name}</option>
+                                        <option key={"Category" + category._id} value={category._id}>{category.name}</option>
                                     ))}
                                 </Form.Select>
                             </Form.Group>
@@ -31,10 +45,10 @@ function Searchbar(props) {
                         <Col xs={6} sm={4}>
                             <Form.Group className="d-flex align-items-center">
                                 <Form.Label className="mb-0 me-2">Services</Form.Label>
-                                <Form.Select>
-                                    <option disabled selected>--select a value--</option>
+                                <Form.Select value={selectedService} onChange={handleServiceChange}>
+                                    <option disabled value="">--select a value--</option>
                                     {props.Services.map((service) => (
-                                        <option key={"Service" + service.id}>{service.name}</option>
+                                        <option key={"Service" + service._id} value={service._id}>{service.name}</option>
                                     ))}
                                 </Form.Select>
                             </Form.Group>
@@ -60,7 +74,8 @@ function Searchbar(props) {
 Searchbar.propTypes = {
     Categories: PropTypes.array,
     Services: PropTypes.array,
-    HandleSearch: PropTypes.func
+    HandleSearch: PropTypes.func,
+    HandleCategoryDropDown: PropTypes.func
 }
 
 export default Searchbar;

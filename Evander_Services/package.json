@@ -3,12 +3,17 @@
   "version": "0.0.0",
   "description": "Evander_Services",
   "main": "server.js",
+  "type": "module",
   "author": {
     "name": ""
   },
   "devDependencies": {
     "eslint": "^8.21.0"
   },
-  "eslintConfig": {
+  "eslintConfig": {},
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "googleapis": "^140.0.1",
+    "nodemailer": "^6.9.14"
   }
 }

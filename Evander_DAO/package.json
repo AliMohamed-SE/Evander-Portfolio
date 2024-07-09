@@ -2,6 +2,7 @@
   "name": "evander_dao",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "seed": "node Seed/seed.js"
   },
@@ -11,6 +12,7 @@
   },
   "dependencies": {
     "body-parser": "^1.15.0",
+    "cloudinary": "^2.2.0",
     "cookie-parser": "^1.4.0",
     "debug": "^2.2.0",
     "dotenv": "^16.4.5",

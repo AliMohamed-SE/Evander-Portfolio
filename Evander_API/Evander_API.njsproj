@@ -33,10 +33,16 @@
     <Content Include=".eslintrc.json" />
     <Content Include="app.js" />
     <Content Include="container.js" />
+    <Content Include="Controllers\categoryController.js" />
+    <Content Include="Controllers\contactController.js" />
     <Content Include="Controllers\projectController.js" />
+    <Content Include="Controllers\serviceController.js" />
+    <Content Include="routes\categoryRoutes.js" />
+    <Content Include="routes\contactRoutes.js" />
     <Content Include="routes\projectRoutes.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="routes\serviceRoutes.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />

@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { ServiceProvider } from './ServiceContext.jsx'; // Import your Service Provider
 // Styles
 import './assets/Styles/index.css'
 // Bootstrap & MBD & Font Awesome
@@ -15,6 +16,8 @@ import App from './Components/App.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
+        <ServiceProvider>
+            <App />
+        </ServiceProvider>
   </React.StrictMode>,
 )

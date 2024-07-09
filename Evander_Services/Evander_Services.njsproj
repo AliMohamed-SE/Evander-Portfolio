@@ -32,6 +32,9 @@
     <Content Include=".eslintrc.json" />
     <Content Include="package.json" />
     <Content Include="README.md" />
+    <Content Include="Services\categoryService.js" />
+    <Content Include="Services\serviceService.js" />
+    <Content Include="Services\contactService.js" />
     <Content Include="Services\projectService.js" />
   </ItemGroup>
   <ItemGroup>

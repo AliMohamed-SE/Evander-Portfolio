@@ -1,3 +1,85 @@
-.project-card{
+.project-card {
     max-width: 500px;
+    border: none;
+    box-shadow: none;
+    background-color: #fafafa;
+    cursor: pointer;
+    position: relative; /* Ensure the container is relative for absolute positioning inside */
+    border-radius: 10px; /* Maintain the rounded corners */
+    opacity: 0;
+}
+
+.project-card-img {
+    width: 100%; /* Ensure image fills its container */
+    border-radius: 10px; /* Maintain the rounded corners */
+}
+
+.project-card-img-overlay {
+    display: none;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.5);
+    flex-direction : column;
+    justify-content : center;
+    align-items : center;
+    color: white;
+}
+
+.project-card-imgoverlay-linebreaker {
+    border: 1px solid white;
+    width: 70%;
+    padding: 0;
+    margin: 2%;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.project-card-linebreaker,
+.project-card-body,
+.project-card-footer {
+    display: none;
+    overflow: hidden;
+}
+
+/* Media query for larger screens (computers) */
+@media (min-width: 992px) {
+    .project-card-linebreaker,
+    .project-card-body,
+    .project-card-footer {
+        display: none;
+    }
+}
+
+/* Media query for smaller screens (mobile devices) */
+@media (max-width: 992px) {
+    .project-card {
+        position: relative;
+        overflow: hidden;
+        transition: box-shadow 0.3s;
+    }
+
+        .project-card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+    .project-card-img-overlay {
+        display: none;
+    }
+
+    .project-card-linebreaker {
+        display: block; /* Ensure it's block level */
+        border: 1px solid black; /* Set the border */
+        width: 70%; /* Set the desired width */
+        margin: 2% auto; /* Center horizontally and add vertical margins */
+    }
+
+    .project-card-body,
+    .project-card-footer {
+        display: block;
+    }
+
+    .project-card-footer {
+        border-top-width: 1px; /* Smaller border for mobile devices */
+    }
 }

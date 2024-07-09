@@ -1,8 +1,67 @@
+@font-face {
+    font-family: 'Ellianarelles Path';
+    src: url('../Fonts/Ellianarelle s Path.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Coolvetica';
+    src: url('../Fonts/coolvetica rg.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../Fonts/Calibri Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../Fonts/Calibri Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../Fonts/Calibri Light.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../Fonts/Calibri Light Italic.otf') format('opentype');
+    font-weight: lighter;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../Fonts/Calibri Bold.TTF') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Calibri';
+    src: url('../Fonts/Calibri Bold Italic.otf') format('opentype');
+    font-weight: bold;
+    font-style: italic;
+}
+
 #root {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
     background-color: #fafafa;
+    --primary-color: #2b3d4f;
+    --secondary-color: gold;
+    --background-color: #fffffa;
 }
 
 .logo {

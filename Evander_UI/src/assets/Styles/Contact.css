@@ -1,0 +1,45 @@
+.contact-section {
+    position: relative; /* Ensure the pseudo-element is positioned relative to this container */
+    min-height: 100vh;
+    padding: 1rem;
+    overflow: hidden; /* Ensure the pseudo-element doesn't overflow the container */
+}
+
+    .contact-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('../Images/Contact-Background.jpg');
+        background-size: cover; /* Adjust as needed */
+        background-position: center; /* Adjust as needed */
+        background-repeat: no-repeat;
+        opacity: 0.6; /* Adjust the opacity value as needed */
+        z-index: 0; /* Ensure the background is behind the content */
+    }
+
+.was-validated .form-control:invalid, .form-control.is-invalid {
+    margin-bottom: 0;
+    background-image: none;
+    border-color: #dc4c64;
+}
+
+.contact-button-submit {
+    background-color: var(--primary-color);
+    border-radius: 50px;
+    float: right;
+    font-family: 'Calibri';
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.contact-form {
+    font-family: 'Calibri';
+    font-weight: bold;
+}
+
+.contact-content {
+    z-index: 1;
+}

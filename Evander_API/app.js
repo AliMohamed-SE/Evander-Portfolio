@@ -1,18 +1,25 @@
 'use strict';
-var debug = require('debug')('my express app');
-var express = require('express');
-var logger = require('morgan');
-var cookieParser = require('cookie-parser');
-var bodyParser = require('body-parser');
-var cors = require('cors');
-const { connectDB } = require('../SharedLibrary/database');
-const container = require('./container');
-const projectRoutes = require('./routes/projectRoutes');
+import debug from 'debug';
+import express from 'express';
+import logger from 'morgan';
+import cookieParser from 'cookie-parser';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import { connectDB } from '../SharedLibrary/database.js';
+import container from './container.js';
 
-require('dotenv').config();
+// Routes
+import projectRoutes from './routes/projectRoutes.js';
+import contactRoutes from './routes/contactRoutes.js';
+import serviceRoutes from './routes/serviceRoutes.js';
+import categoryRoutes from './routes/categoryRoutes.js';
+
+import dotenv from 'dotenv';
+dotenv.config();
 
 var app = express();
 const PORT = process.env.PORT || 3000;
+const IP_ADDRESS = '192.168.1.16';
 
 // Connect to MongoDB
 connectDB();
@@ -26,41 +33,23 @@ app.use(cors());
 
 // Define the routes
 const projectController = container.resolve('projectController');
-app.use('/projects', projectRoutes(projectController));
+const contactController = container.resolve('contactController');
+const serviceController = container.resolve('serviceController');
+const categoryController = container.resolve('categoryController');
 
-// catch 404 and forward to error handler
-app.use(function (req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
+app.use('/api/projects', projectRoutes(projectController));
+app.use('/api/contact', contactRoutes(contactController));
+app.use('/api/services', serviceRoutes(serviceController));
+app.use('/api/categories', categoryRoutes(categoryController));
 
-// error handlers
-
-// development error handler
-// will print stacktrace
-if (app.get('env') === 'development') {
-    app.use(function (err, req, res, next) {
-        res.status(err.status || 500);
-        res.send('error', {
-            message: err.message,
-            error: err
-        });
-    });
-}
-
-// production error handler
-// no stacktraces leaked to user
-app.use(function (err, req, res, next) {
-    res.status(err.status || 500);
-    res.send('error', {
-        message: err.message,
-        error: {}
-    });
-});
 
 app.set('port', PORT);
 
-var server = app.listen(app.get('port'), function () {
-    debug('Express server listening on port ' + server.address().port);
+var server = app.listen(PORT, IP_ADDRESS, function () {
+    const address = server.address();
+    if (address) {
+        console.log(`Express server listening on address ${address.address} port ${address.port}`);
+    } else {
+        console.error('Failed to start server');
+    }
 });

@@ -1,0 +1,18 @@
+{
+  "name": "Evander-Web-Application",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "concurrently \"cd Evander_API && npm run dev\" \"cd Evander_UI && npm run dev\"",
+    "start:backend": "cd Evander_API && npm run dev",
+    "start:frontend": "cd Evander_UI && npm run dev",
+    "build": "npm run build:Evander_API && npm run build:Evander_UI",
+    "build:backend": "cd Evander_API && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "lint": "npm run lint:Evander_API && npm run lint:Evander_UI",
+    "lint:backend": "cd Evander_API && npm run lint",
+    "lint:frontend": "cd Evander_UI && npm run lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

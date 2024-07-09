@@ -1,0 +1,125 @@
+.process-section {
+    min-height: 100vh;
+    counter-reset: step-counter;
+}
+
+.process-nav{
+    background-color: var(--primary-color);
+    padding-top: 2%;
+}
+
+    .process-nav .nav-item a {
+        background-color: white;
+        font-size: clamp(12px, 0.9vw, 30px);
+    }
+
+.process-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0%;
+    padding: 1%;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    background-color: var(--primary-color);
+}
+
+    .process-header h1 {
+        font-family: Coolvetica;
+        font-weight: normal;
+        color: var(--secondary-color);
+        font-size: clamp(35px, 4.274vw, 80px);
+        padding: 2%;
+    }
+
+    .process-header p {
+        font-family: Calibri;
+        font-weight: normal;
+        color: white;
+        line-height: normal;
+        font-size: clamp(20px, 2.671vw, 50px);
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+.process-section1 {
+    padding: 5%;
+    color: var(--primary-color);
+}
+
+    .process-section1 .process-step .step-number {
+        color: var(--primary-color);
+    }
+
+    .process-section1 img {
+        width: 26vw;
+        min-width: 200px;
+        height: auto;
+        border-radius: 50px;
+        opacity: 0.5;
+    }
+
+.process-step {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+}
+
+    .process-step .step-number {
+        font-family: Calibri;
+        font-weight: bold;
+        font-size: clamp(31px, 3.74vw, 70px);
+        padding-right: 2%;
+        line-height: 0.7;
+    }
+
+    .process-step h2 {
+        font-family: Calibri;
+        font-weight: bold;
+        font-size: clamp(23px, 2.671vw, 50px);
+    }
+
+    .process-step p, ul {
+        font-family: Calibri;
+        font-weight: normal;
+        font-size: clamp(17px, 2vw, 35px);
+        line-height: normal;
+    }
+
+
+.process-section2 {
+    padding: 5%;
+    background-color: var(--primary-color);
+}
+
+    .process-section2 img {
+        width: 40vw;
+        min-width: 300px;
+        height: auto;
+        border-radius: 50px;
+        opacity: 0.5;
+        margin: 5%;
+    }
+
+    .process-section2 .process-step h2, .step-number {
+        color: var(--secondary-color);
+    }
+
+    .process-section2 .process-step p {
+        color: white;
+    }
+
+.process-final {
+    padding: 5%;
+    color: var(--primary-color);
+}
+
+    .process-final .process-step .step-number {
+        color: var(--primary-color);
+    }
+
+.process-list {
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}

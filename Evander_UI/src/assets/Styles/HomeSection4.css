@@ -1,0 +1,114 @@
+/* Home.css */
+
+.home-section-understandjourney {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 88vh;
+    overflow: hidden;
+    color: var(--primary-color);
+}
+
+.home-section-understandjourney-row {
+    width: 100%;
+    height: 100%; /* Ensure the row takes full height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+}
+
+.understand-journey-image {
+    max-width: 80%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure block display for centering */
+    margin: 0 auto; /* Center horizontally within the column */
+    border-radius: 20px
+}
+
+.home-section-understandjourney-header {
+    font-family: 'Coolvetica';
+    font-weight: normal;
+    font-size: 4.1vw;
+    line-height: 4.3rem;
+    text-align: start;
+    padding-bottom: 2%
+}
+
+    .home-section-understandjourney-header span {
+        color: var(--secondary-color);
+    }
+
+.home-section-understandjourney-text {
+    font-family: 'Calibri';
+    font-weight: normal;
+    font-size: 2.5vw;
+    text-align: start;
+    line-height: 3.3rem;
+}
+
+/* Optional: Adjust font sizes for responsive design */
+@media (max-width: 1200px) and (min-width: 776px) {
+    .understand-journey-image {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .understand-journey-image {
+        max-width: 100%;
+    }
+
+    .home-section-understandjourney-header {
+        font-size: 70px;
+    }
+
+    .home-section-understandjourney-text {
+        font-size: 40px;
+        line-height: 3rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .understand-journey-image {
+        max-width: 100%;
+    }
+
+    .home-section-understandjourney-header {
+        font-size: 50px;
+    }
+
+    .home-section-understandjourney-text {
+        font-size: 30px;
+        line-height: 2.2rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .understand-journey-image {
+        max-width: 70%;
+    }
+
+    .home-section-understandjourney-header {
+        font-size: 50px;
+    }
+
+    .home-section-understandjourney-text {
+        font-size: 30px;
+        line-height: 2.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .understand-journey-image {
+        max-width: 100%;
+    }
+
+    .home-section-understandjourney-header {
+        font-size: 40px;
+        line-height: 3rem;
+    }
+
+    .home-section-understandjourney-text {
+        font-size: 25px;
+        line-height: 1.8rem;
+    }
+}

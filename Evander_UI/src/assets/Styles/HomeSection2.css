@@ -1,0 +1,109 @@
+/* Home.css */
+
+.home-section-exploreportfolio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 88vh;
+    overflow: hidden;
+    color: #2b3d4f;
+}
+
+.home-section-exploreportfolio-row {
+    width: 100%;
+    height: 100%; /* Ensure the row takes full height */
+    display: flex;
+    align-items: center; /* Center content vertically */
+}
+
+.explore-portfolio-image {
+    max-width: 60%;
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure block display for centering */
+    margin: 0 auto; /* Center horizontally within the column */
+}
+
+.home-section-exploreportfolio-header {
+    font-family: 'Coolvetica';
+    font-weight: normal;
+    font-size: 4vw;
+    text-align: start;
+}
+
+    .home-section-exploreportfolio-header span {
+        color: var(--secondary-color);
+    }
+
+.home-section-exploreportfolio-text {
+    font-family: 'Calibri';
+    font-weight: normal;
+    font-size: 3vw;
+    text-align:start;
+    line-height: 3.5rem;
+}
+/* Optional: Adjust font sizes for responsive design */
+@media (max-width: 1200px) and (min-width: 776px) {
+    .explore-portfolio-image {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .explore-portfolio-image {
+        max-width: 100%;
+    }
+
+    .home-section-exploreportfolio-header {
+        font-size: 70px;
+    }
+
+    .home-section-exploreportfolio-text {
+        font-size: 40px;
+        line-height: 3rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .explore-portfolio-image {
+        max-width: 100%;
+    }
+
+    .home-section-exploreportfolio-header {
+        font-size: 50px;
+    }
+
+    .home-section-exploreportfolio-text {
+        font-size: 30px;
+        line-height: 2.2rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .explore-portfolio-image {
+        max-width: 50%;
+    }
+
+    .home-section-exploreportfolio-header {
+        font-size: 50px;
+    }
+
+    .home-section-exploreportfolio-text {
+        font-size: 30px;
+        line-height: 2.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .explore-portfolio-image {
+        max-width: 50%;
+    }
+
+    .home-section-exploreportfolio-header {
+        font-size: 40px;
+    }
+
+    .home-section-exploreportfolio-text {
+        font-size: 25px;
+        line-height: 2rem;
+    }
+}

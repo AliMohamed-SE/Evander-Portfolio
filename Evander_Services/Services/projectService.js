@@ -7,8 +7,12 @@ class ProjectService {
         return await this.projectDAO.createProject(data);
     }
 
-    async getAllProjects() {
-        return await this.projectDAO.getAllProjects();
+    async getProjectDetails(id) {
+        return await this.projectDAO.getProjectDetails(id);
+    }
+
+    async getAllProjectsGeneralInfo(category, service, filterQuery) {
+        return await this.projectDAO.getAllProjectsGeneralInfo(category, service, filterQuery);
     }
 
     async getProjectById(id) {
@@ -18,4 +22,4 @@ class ProjectService {
     // Add more methods as needed
 }
 
-module.exports = ProjectService;
+export default ProjectService;

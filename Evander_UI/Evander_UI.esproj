@@ -10,7 +10,5 @@
   </PropertyGroup>
   <ItemGroup>
     <Folder Include="public\" />
-    <Folder Include="src\assets\Fonts\" />
-    <Folder Include="src\assets\Animations\" />
   </ItemGroup>
 </Project>

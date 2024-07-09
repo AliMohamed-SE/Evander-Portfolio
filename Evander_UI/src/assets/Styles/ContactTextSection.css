@@ -1,0 +1,75 @@
+.contact-text-section-header {
+    font-family: 'Coolvetica';
+    font-weight: normal;
+    font-size: 3.2vw;
+}
+
+    .contact-text-section-header span {
+        color: var(--secondary-color);
+    }
+
+.contact-text-section-paragraph {
+    font-family: 'Calibri';
+    font-weight: normal;
+    line-height: 3rem;
+    font-size: 2.5vw;
+}
+
+.contact-text-socialicon{
+    width: 50%;
+    cursor: pointer;
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .contact-text-section-paragraph {
+        line-height: 2.5rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .contact-text-section-header {
+        font-size: 3.5vw;
+    }
+
+    .contact-text-section-paragraph {
+        line-height: 2rem;
+        font-size: 3vw;
+    }
+
+    .contact-text-socialicon {
+        width: 70%;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .contact-text-section-header {
+        font-size: 5vw;
+    }
+
+    .contact-text-section-paragraph {
+        line-height: 2rem;
+        font-size: 4vw;
+    }
+
+    .contact-text-socialicon {
+        width: 50%;
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-text-section-header {
+        font-size: 7vw;
+    }
+
+    .contact-text-section-paragraph {
+        line-height: 2rem;
+        font-size: 6vw;
+    }
+
+    .contact-text-socialicon {
+        width: 70%;
+        cursor: pointer;
+    }
+}

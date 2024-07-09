@@ -12,9 +12,18 @@ class ProjectController {
         }
     }
 
-    async getAllProjects(req, res) {
+    async getProjectDetails(req, res) {
         try {
-            const projects = await this.projectService.getAllProjects();
+            const projects = await this.projectService.getProjectDetails(req.params.id);
+            res.status(200).json(projects);
+        } catch (error) {
+            res.status(400).json({ error: error.message });
+        }
+    }
+
+    async getAllProjectsGeneralInfo(req, res) {
+        try {
+            const projects = await this.projectService.getAllProjectsGeneralInfo(req.query.category, req.query.service, req.query.filterQuery);
             res.status(200).json(projects);
         } catch (error) {
             res.status(400).json({ error: error.message });
@@ -36,4 +45,4 @@ class ProjectController {
     // Add more methods as needed
 }
 
-module.exports = ProjectController;
+export default ProjectController;

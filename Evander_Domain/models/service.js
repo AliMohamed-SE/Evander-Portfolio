@@ -1,10 +1,11 @@
-const { mongoose } = require('../../SharedLibrary/database');
+import { mongoose } from '../../SharedLibrary/database.js';
 
 const serviceSchema = new mongoose.Schema({
     name: { type: String, required: true },
-    description: { type: String, required: true}
+    description: { type: String, required: true },
+    categories: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Category' }]
 })
 
 const Service = mongoose.model('Service', serviceSchema);
 
-module.exports = Service;
+export default Service;

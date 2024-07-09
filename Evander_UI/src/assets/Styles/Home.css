@@ -1,4 +1,147 @@
 .Home-Section {
-    height: 100vh;
-    background-color: #2b3d4f;
+    min-height: 100vh;
+    background-color: #fafafa;
+}
+
+.home-dark-CTA {
+    font-family: 'Coolvetica';
+    height: 63px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 30px;
+    color: white;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    float: right;
+    margin-right: 6%
+}
+
+.home-dark-CTA {
+    position: relative;
+    overflow: hidden; /* Ensure the sliding element stays within the button bounds */
+    transition: color 0.3s; /* Smooth transition for the text color */
+    display: inline-flex;
+    align-items: center;
+    text-transform: none;
+}
+
+    .home-dark-CTA .button-text {
+        transition: transform 0.3s; /* Smooth transition for the text */
+    }
+
+    .home-dark-CTA .slide-in-element {
+        position: absolute;
+        right: -20px; /* Start position of the sliding element */
+        top: 50%;
+        transform: translateY(-45%);
+        transition: right 0.3s, opacity 0.3s; /* Smooth transition for the sliding element */
+        opacity: 0; /* Initially hidden */
+    }
+
+    .home-dark-CTA:hover {
+        color: gold; /* Change text color on hover */
+    }
+
+        .home-dark-CTA:hover .button-text {
+            transform: translateX(-7px); /* Move the text to the left */
+        }
+
+        .home-dark-CTA:hover .slide-in-element {
+            right: 6px; /* End position of the sliding element */
+            opacity: 1; /* Show the element */
+        }
+
+.home-light-CTA {
+    font-family: 'Coolvetica';
+    height: 63px;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 30px;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+    .home-light-CTA:hover {
+        background-color: none;
+        color: white;
+        border: 1px solid white;
+        border-radius: 10px;
+    }
+
+.home-light-CTA {
+    position: relative;
+    overflow: hidden; /* Ensure the sliding element stays within the button bounds */
+    transition: color 0.3s; /* Smooth transition for the text color */
+    display: inline-flex;
+    align-items: center;
+    background-color: white;
+    color: #2b3d4f;
+    font-weight: bold;
+}
+
+    .home-light-CTA .button-text {
+        transition: transform 0.3s; /* Smooth transition for the text */
+    }
+
+    .home-light-CTA .slide-in-element {
+        position: absolute;
+        right: -20px; /* Start position of the sliding element */
+        top: 50%;
+        transform: translateY(-45%);
+        transition: right 0.3s, opacity 0.3s; /* Smooth transition for the sliding element */
+        opacity: 0; /* Initially hidden */
+    }
+
+    .home-light-CTA:hover {
+        color: gold; /* Change text color on hover */
+    }
+
+        .home-light-CTA:hover .button-text {
+            transform: translateX(-7px); /* Move the text to the left */
+        }
+
+        .home-light-CTA:hover .slide-in-element {
+            right: 6px; /* End position of the sliding element */
+            opacity: 1; /* Show the element */
+        }
+
+@media (min-width: 1201px) {
+    .home-light-CTA, .home-dark-CTA {
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .home-light-CTA, .home-dark-CTA {
+        font-size: 25px;
+        padding-right: 25px;
+        padding-left: 25px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .home-light-CTA, .home-dark-CTA {
+        font-size: 20px;
+        padding-right: 20px;
+        padding-left: 20px;
+        height: 55px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .home-light-CTA, .home-dark-CTA {
+        font-size: 15px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 576px) {
+    .home-light-CTA, .home-dark-CTA {
+        font-size: 15px;
+        height: 40px;
+    }
 }
